@@ -36,7 +36,7 @@
 
           <div class="nav-dropdown">
             <div class="nav-dropdown-inner">
-              <ul class="list-unstyled">
+              <ul class="list-unstyled">{% comment %}
                   <li ng-if="customer && customer.UserName != 'Anonymous'">
                       <a href="{{ 'account' | absolute_url }}">{{ 'general.top.my_account' | t }}</a>
                   </li>
@@ -49,8 +49,7 @@
                   <li ng-if="customer && customer.UserName == 'Anonymous'">
                       <a href="{{ 'account/register' | absolute_url }}">{{ 'general.top.register' | t }}</a>
                   </li>
-
-                  {% comment %}
+                  
                   {% if customer %}
                   <li>
                   {% assign page_tmp = pages[settings.wishlist_page] %}
